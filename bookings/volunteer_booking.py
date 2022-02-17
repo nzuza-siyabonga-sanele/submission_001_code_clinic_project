@@ -1,8 +1,5 @@
 from api_services import calendar_service
-<<<<<<< HEAD
 import webbrowser
-=======
->>>>>>> CodeClinic_Tests
 
 
 
@@ -32,8 +29,5 @@ def book_volunteer_slot(start_time, endtime, email,campus, expertise,username):
     # call API to create event
     event = service.events().insert(calendarId="c_t2chai1o082hgvkck0r8nhfa00@group.calendar.google.com", body=event, \
             sendUpdates = 'all').execute()
-<<<<<<< HEAD
     
     webbrowser.open('https://calendar.google.com/calendar/u/0/r',new=0,autoraise=True)
-=======
->>>>>>> CodeClinic_Tests

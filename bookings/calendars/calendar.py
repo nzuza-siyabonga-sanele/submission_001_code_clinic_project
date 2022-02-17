@@ -2,7 +2,7 @@
 from operator import indexOf
 import re
 from authentication import authentication
-# get wethinkcode code clinics calendar
+#get wethinkcode code clinics calendar
 from tabulate import tabulate
 import datetime
 from api_services import calendar_service
