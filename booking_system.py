@@ -95,6 +95,36 @@ def get_student_data():
 
 
 
+<<<<<<< HEAD
+=======
+
+    
+def get_volunteer_data():
+    email = authentication.User_Data[0]
+    campus = authentication.User_Data[1]
+    username =authentication.User_Data[2]
+    expertise =  authentication.get_user_input("Description:", str)
+    date= authentication.get_user_input("Date (YYYY-MM-DD):", str)
+    valid_date = calendar.validate_date(date)
+    time = authentication.get_user_input("Time (H:M):", str)
+    valid_time =  calendar.validate_time(time)
+    format_time =  list(map(int, valid_date.split('-') +valid_time.split(':')))
+    start_time = calendar.convert_to_RFC_datetime(
+        format_time[0], format_time[1],format_time[2], format_time[3], format_time[4] )
+    format_time = calendar.get_end_time(format_time)
+    end_time =  calendar.convert_to_RFC_datetime(
+        format_time[0], format_time[1],format_time[2], format_time[3], format_time[4] )
+    book_volunteer_slot(start_time, end_time, email,campus, expertise, username )
+
+
+
+
+
+
+
+
+
+>>>>>>> CodeClinic_Tests
 #TODO call all functions here
 def start_booking_system():
     setup_account()
@@ -104,4 +134,8 @@ def start_booking_system():
        
 
 if __name__ =="__main__":
+<<<<<<< HEAD
     start_booking_system()
+=======
+    start_booking_system()
+>>>>>>> CodeClinic_Tests
